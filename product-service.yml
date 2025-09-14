@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: product-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/product_db
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  # Actuator
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
+
+  server:
+    port: 8082
